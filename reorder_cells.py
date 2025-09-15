@@ -17,6 +17,14 @@ move_ids = [
     'ds-hybrid-code',
     'ds-soft-top2-intro',
     'ds-soft-top2-code',
+    'ds-hybrid-grid-intro',
+    'ds-hybrid-grid-code',
+    'ds-hybrid-discussion',
+    'ds-final-eval-intro',
+    'ds-final-eval-code',
+    'ds-optimizer-intro',
+    'ds-optimizer-code',
+    'ds-optimizer-heatmap',
 ]
 
 # Collect cells to move (preserve order)
@@ -35,7 +43,15 @@ for cid in reversed(move_ids):
         cells.pop(i)
 
 # Find insertion point: after ds-param-sweep-code (or after ds-softvoting-quantile-code if present)
-after_ids = ['ds-param-sweep-code', 'ds-softvoting-quantile-code', 'ds-softvoting-code']
+after_ids = [
+    'ds-hybrid-discussion',
+    'ds-hybrid-grid-code',
+    'ds-soft-top2-code',
+    'ds-hybrid-code',
+    'ds-param-sweep-code',
+    'ds-softvoting-quantile-code',
+    'ds-softvoting-code'
+]
 ins_idx = None
 for aid in after_ids:
     i = idx_by_id(aid)
