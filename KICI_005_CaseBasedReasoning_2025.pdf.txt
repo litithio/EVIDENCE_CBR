@@ -1,0 +1,363 @@
+www.cas.dhbw.de
+Case 
+Based
+Reasoning
+–
+Analogie und Ähnlichkeit
+Prof. Dr. Dirk Reichardt
+Methoden der Künstlichen Intelligenz 
+& 
+Computational
+Intelligence
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Symbolische 
+Logik
+Grundlagen 
+der Logik und 
+Regelsysteme
+Constraint
+Systeme
+KI Systeme und 
+Architekturen
+Agenten
+-
+systeme
+Heuristische 
+Suchverfahren
+Grundlagen 
+der Suche 
+und A*
+Unschärfe und 
+Wahrschein
+-
+lichkeit
+Bayes
+Netze
+Evidenz
+-
+theorie
+Ähnlichkeit und 
+Fallbasiertes 
+Schließen
+Ähnlichkeits
+-
+maße
+Case 
+Based
+Reasoning
+und Case 
+Based
+Learning
+Logik
+Graphen
+Statistik
+Modul 
+–
+Teil 1 : Grundlagen Künstliche Intelligenz
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Analogieschluss
+Gelernt: Durch Herunterdrücken 
+der Klinke öffnet sich die Tür
+Analogie: Das Herunterdrücken 
+entspricht Drehung nach rechts …
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Analogieschluss
+Gelernt: Durch Herunterdrücken 
+der Klinke bzw. Drehen nach rechts 
+öffnet sich die Tür
+Gemeinsam: 
+Drehen zur abgewandten Seite …
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Analogieschluss und Abstraktion
+
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Abstraktion
+Auto 1
+Auto 2
+Auto 3
+Auto 4
+Auto
+Abstraktes Konzept
+Reale Beispiele
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Zwei Dinge sind als „ähnlich“ zu betrachten, wenn sie auf einer Abstraktionsebene 
+gleich sind.
+A) Zwei Ebenen
+Abstrakte Ebene (Muster)
+Konkrete Ebene (Beispiel)
+B) Zwei Abbildungen
+Abstraktion
+A
+Konkretisierung
+K
+A und K heißen kompatibel, wenn A(K(x)) = x für alle x 
+der abstrakten Ebene.
+Und umgekehrt?
+Im allgemeinen gilt:  K(A(x
+1
+,...,
+x
+n
+)) 
+
+(x
+1
+,...,
+x
+n
+)
+Abstraktion
+Auto
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Fahrzeug
+Compact
+Limousine
+Cabrio
+Kombi
+7
+-
+1/2
+-
+Tonner
+Sattelzug
+...
+Scooter
+Motorrad
+PKW
+LKW
+Zweirad
+Je mehr Abstraktionsabbildungen nötig sind, um zwei Objekte ununterscheidbar zu machen, 
+desto unähnlicher sind die Objekte.
+. . .
+Zwei Objekte sind zueinander ähnlich, wenn sie durch eine Abstraktion 
+ununterscheidbar
+werden.
+Ähnlichkeit durch Abstraktion
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Beispielaufgabe Abstraktion
+Stellen Sie eine Abstraktionshierarchie 
+(analog zu „Fahrzeug“) für das Thema
+„Prüfungsleistung“ auf.
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Qualitative 
+Aufgabe
+Qualitative
+Lösung
+Quantitative
+Aufgabe
+Quantitative 
+Lösung
+Ebene Q
+Ebene 
+
+A
+K
+qual
+quant
+Idee:
+Abstraktion und qualitatives Schließen
+MULT 
++  0  
+-
++    +  0  
+-
+0    0  0  0
+-
+-
+0  +
+Beispiel: Multiplikation auf abstrakter Ebene
+R: 
+5  * 7          =  ?
+Q: 
++  MULT +  =  +
+??
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Qualitative 
+Aufgabe
+Qualitative
+Lösung
+Quantitative
+Aufgabe
+Quantitative 
+Lösung
+Ebene Q
+Ebene 
+
+A
+K
+qual
+quant
+Idee:
+Wie sind hier 
+Vollständigkeit
+und 
+Korrektheit
+definiert?
+Abstraktion und qualitatives Schließen
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Beispielaufgabe Qualitatives Schließen
+Addition auf abstrakter Ebene
+Auf der realen Ebene nutzen wir 
+die ganzen Zahlen. Auf der 
+qualitativen (abstrakten) Ebene 
+nur +,
+-
+und 0. 
+Wie können Sie auf der 
+abstrakten Ebene 
+die Addition definieren?
+Spielen Sie dies 
+anhand von einigen 
+Beispielen durch … 
+was fällt auf?
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Fallbasiertes Schließen (Case 
+Based
+Reasoning
+)
+Die Grundidee: Lernen aus Erfahrung 
+Problemsituation
+Gefundene
+Lösung
+Neue
+Problemsituation
+?
+Ähnlich?
+Bekannte Lösung
+anpassen und
+wieder verwenden
+Analogie
+Erfahrungen
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Analogiebasiertes Schließen
+Beispiel:
+Schalter=An
+Gerät=Fernseher
+Antenne=eingesteckt
+Bildschirm=schwarz
+Stecker=eingesteckt
+Strom einschalten
+Gerät=Motorrad
+Zündung=an
+Motor=läuft nicht
+?
+Ähnlich?
+Analoge Lösung
+Beides sind technische
+Geräte
+Beide benötigen Energie
+Beide erfüllen ihre 
+Funktion nicht
+Energiequelle
+aktivieren
+Benzinhahn öffnen
+Erfahrungswissen
+Neue Situation
+
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+A
+RETRIEVE
+Neue Situation
+REUSE
+REVISE
+RETAIN
+Verwende die Lösung 
+des gefundenen, 
+ähnlichen Falles:
+Lösungsvorschlag für A
+Suche nach einem 
+ausreichend ähnlichen 
+Fall in der Fallbasis
+Ist die Lösung gut? 
+Der Benutzer 
+überarbeitet die Lösung 
+und gibt sie ans System 
+zurück.
+Trage die Situation und 
+ihre Lösung als neuen 
+Fall in die Fallbasis ein.
+Fallbasiertes Schließen (CBR Zyklus)
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Case Matching Systeme
+Ein ähnlicher Fall wird in der Fallbasis gesucht
+Die gespeicherte Lösung (Klassifikation) wird als Ergebnis ausgegeben
+Case Adaptation Systeme
+Ein ähnlicher Fall wird in der Fallbasis gesucht
+Die Lösung wird an die neue Situation angepasst (adaptiert)
+Dazu ist Domänenwissen notwendig
+Alle möglichen Fälle müssen abgedeckt werden (Vollständigkeit)
+Die Fälle müssen effizient wieder auffindbar sein (Index)
+Fallbasiertes Schließen
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Was ist ein Analogieschluss?
+Was ist ein Analogieschluss?
+Wie funktioniert qualitatives Schließen?
+Wie funktioniert qualitatives Schließen?
+Wie funktioniert CBR?
+Wie funktioniert CBR?
+Was sind Case Adaptation Systeme?
+Was sind Case Adaptation Systeme?

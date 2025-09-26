@@ -1,0 +1,1056 @@
+www.cas.dhbw.de
+Ähnlichkeit und Distanz 
+–
+Konstruktion von Maßen
+Prof. Dr. Dirk Reichardt
+Methoden der Künstlichen Intelligenz 
+& 
+Computational
+Intelligence
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Symbolische 
+Logik
+Grundlagen 
+der Logik und 
+Regelsysteme
+Constraint
+Systeme
+KI Systeme und 
+Architekturen
+Agenten
+-
+systeme
+Heuristische 
+Suchverfahren
+Grundlagen 
+der Suche 
+und A*
+Unschärfe und 
+Wahrschein
+-
+lichkeit
+Bayes
+Netze
+Evidenz
+-
+theorie
+Ähnlichkeit und 
+Fallbasiertes 
+Schließen
+Ähnlichkeits
+-
+maße
+Case 
+Based
+Reasoning
+und Case 
+Based
+Learning
+Logik
+Graphen
+Statistik
+Modul 
+–
+Teil 1 : Grundlagen Künstliche Intelligenz
+
+Formalisierung der Ähnlichkeit
+Ähnlich?
+Ähnlich?
+Ähnlich?
+Ja, beides sind
+Autos
+Ja, beide sind
+rot
+???
+... Ähnlichkeit bzgl.
+eines Merkmals (Farbe)
+... Ähnlichkeit bzgl. einer 
+Kategorie, d.h. nicht 
+unterscheidbar in der 
+Abstraktion
+
+Ähnlichkeit und Distanz
+Wir unterscheiden zwei verschiedene Maße:
+Ähnlichkeitsmaße :       sim(x,y)
+Distanzmaße:               d (x,y)
+Attribut y
+Attribut x
+Welche Objekte sind
+zueinander ähnlicher?
+Die roten oder die blauen?
+
+Definition: Ähnlichkeitsmaße und Distanzmaße
+Distanzmaß
+Eine Abbildung d: M x M 
+
+
+über einer Menge M heißt Distanzmaß,
+falls 
+
+x,y,z 
+
+M gilt: 
+(i)     d(x,x) = 0            (Reflexivität)
+(ii)    d(x,y) = d(y,x)     (Symmetrie)
+(iii)   d(x,y) = 0 
+
+x = y
+Ergänzung:
+Metrik 
+Ist d ein Distanzmaß auf der Menge M und gilt zusätzlich
+(iv)   d(x,y) + d(y,z) 
+
+d(x,z)
+So ist d eine Metrik und (M,d) ein metrischer Raum.
+
+Distanzmaße
+Manhattan / City Block
+
+
+,
+
+=
+
+
+
+
+−
+
+
+|
+
+
+x
+y
+5
+2
+=> 7
+Euklidische Distanz
+
+
+,
+
+=
+ 
+
+(
+
+
+−
+
+
+)
+
+
+
+
+=> 5,4
+Wertedistanz
+
+
+,
+
+=
+| x 
+–
+y
+|
+
+
+
+,
+
+=
+
+
+
+−
+
+
+
+
+
+
+
+
+
+P = 1
+P = 2
+MANHATTAN
+Distanz
+EUKLIDISCHE
+Distanz
+Minkowski
+Distanz
+
+Die Cosinus Distanz
+Seite 
+7
+Cosinus Distanz(
+x,y
+) = 1
+-
+∑
+
+
+
+
+
+
+
+
+∑
+
+
+
+
+
+
+
+
+∑
+
+
+
+
+
+
+
+
+0
+1
+2
+3
+4
+5
+0
+1
+2
+3
+4
+5
+Beispiel Cosinusähnlichkeit
+x
+y
+* Vorsicht: wenn gegenläufige Vektoren möglich sind, muss normiert werden auf [0,1]
+
+Kurze Reflexionsübung:  
+Wo liegen die Elemente mit Einheitsdistanz 1 
+wenn die 
+Minkowski
+Distanz mit folgenden
+Parametern verwendet wird:
+a) p = 1
+b) p = 2
+c) p = 1/2
+Diskutieren Sie dies 
+mit  der Nachbarin / dem Nachbarn.
+-1,5
+-1
+-0,5
+0
+0,5
+1
+1,5
+-2
+-1
+0
+1
+2
+Distanzmaße 
+-
+Visualisierungsübung
+
+Seite 
+9
+Etwas komplizierter: 
+Typisierte Vektoren
+X = (x
+1
+, x
+2
+, … , 
+x
+n
+)
+Integer
+Buchstabe
+Begriff
+Attribut
+Wohnung
+A        
+Wohnung B
+Zimmerzahl
+4
+4
+Stockwerk
+3
+7
+Hausmeister
+ja
+ja
+Garage
+nein
+nein
+Alter
+75
+12
+Aufzug
+ja
+ja
+Balkon
+ja
+ja
+Terrasse
+nein
+nein
+Kehrwoche
+ja
+nein
+Moebliert
+nein
+nein
+Miete
+575
+720
+Nebenkosten
+205
+230
+Quadratmeter
+50
+65
+Bad
+Dusche
+Dusche+Wanne
+Distanzmaße
+
+
+,
+
+=
+ 
+?
+
+Analogie und Ähnlichkeit   
+-
+Merkmalstypen und Skalierungen
+Ein Merkmal heißt 
+qualitativ
+, wenn es nur eine endliche Anzahl von Ausprägungen besitzt.
+-
+binär (nur zwei Ausprägungen)
+-
+mehrstufig (mehr als zwei Ausprägungen)
+Ein Merkmal heißt 
+quantitativ
+, wenn die Ausprägungen numerisch sind. 
+(Werte aus einem endlichen oder unendlichen Intervall [a,b].)
+Skalen:
+Nominalskala
+Keine Relation zwischen den Ausprägungen, nur unterscheidbar.
+Ordinalskala
+Totale Ordnung der Ausprägungen
+Kardinalskala
+Nicht nur die Ordnung ist bekannt, auch der Abstand
+
+Nominalskala
+Im empirischen Relativ besteht eine Äquivalenzrelation.
+Messwerte enthalten ausschließlich Information über
+Gleichheit von Ausprägungen.
+Beispiele?
+Beruf, Wohnort, Nationalität, Geschlecht, …
+Messung und Skalen
+
+Messung und Skalen
+Ein Beispiel der Anwendung: 
+Unfallverursacher
+männlich
+weiblich
+farbig
+weiß
+1
+2
+3
+0
+Mittelwert der Stichprobe:
+1
+typische Unfallverursacher
+sind männliche Farbige 
+
+
+Ordinalskala
+Im empirischen Relativ besteht schwache Ordnungsrelation.
+Es ist also messbar ob ein Objekt eine stärkere/schwächere 
+oder gleiche Merkmalsausprägung hat wie ein anderes.
+Beispiele?
+Charts, Militärische Ränge, Tabellenplatz, Beaufort Skala
+Transformationen welche die Rangreihe nicht ändern
+sind zulässig.
+Frage: Wie geht man mit Mittelwertangaben um?
+Beispiel: Beaufort 2,4 und 9 
+–
+Mittelwert = 5
+entspricht nicht der durchschnittlichen Windgeschwindigkeit!
+Merken
+:
+Mittelwert bei 
+ordinal
+skalierten Werten nicht
+einsetzbar 
+–
+alternativ:
+Median
+Messung und Skalen
+
+Messung und Skalen
+Intervallskala
+Die Größe des Unterschieds zwischen Merkmalsaus
+-
+prägungen
+muss empirisch ermittelt werden können.
+Es ist jedoch keine Aussage über Verhältnisse zwischen
+Messwerten möglich.
+Beispiel?
+Celsius Temperaturskala: 
+willkürlicher Nullpunkt, somit 20 nicht doppelt so warm wie 10 
+Lineare Transformationen sind zulässig.
+Beispiel?
+Umrechnung in Fahrenheit:   F = 1.8 * C + 32
+
+Messung und Skalen
+Verhältnisskala
+Die Größe des Unterschieds zwischen Merkmalsaus
+-
+prägungen
+muss empirisch ermittelt werden können und
+es gibt einen echten Nullpunkt (Bedeutung).
+Es ist jedoch keine Aussage über Verhältnisse zwischen
+Messwerten möglich.
+Beispiele?
+Gewicht, Länge etc.
+Absolutskala
+Keine Transformation zulässig. Enthält z.B. Maßeinheit.
+Beispiele?
+Mitglieder einer Gruppe, Fehltage etc.
+
+Skalenübersicht
+Nominal
+Gleich/Ungleich
+Modus
+Ordinal
+Größer/Kleiner
++ Median
+Intervall
+Gleichheit von
++ arithmetisches Mittel
+Differenzen
+Verhältnis
+Gleichheit von
++ geometrisches Mittel
+Verhältnissen
+Absolut
+Maßeinheit
+
+×
+
+
+
++
+
+2
+
+Ähnlichkeitsmaß
+Eine Abbildung sim: M x M 
+
+[0,1] über einer Menge M heißt Ähnlichkeitsmaß,
+falls 
+
+x,y,z 
+
+M gilt: 
+(i)     sim(x,x) = 1                 (Reflexivität)
+(ii)    sim(x,y) = sim(y,x)       (Symmetrie)
+(iii)   sim(x,y) = 1 
+
+x = y
+Ähnlichkeitsmaße müssen nicht unbedingt symmetrisch und transitiv sein.
+Abschwächung:
+Man kann nicht von einer „absoluten“ Ähnlichkeit sprechen, die Ähnlichkeit
+ist immer abhängig vom Anwendungszweck.
+Definition: Ähnlichkeitsmaße und Distanzmaße
+
+Transformation
+Kompatibilität
+Für ein Distanzmaß d(
+x,y
+) kann eine Relation R(
+x,y,u,v
+) definiert werden durch:
+(i) 
+R
+d
+(
+x,y,u,v
+) 
+
+d(
+x,y
+) 
+
+d(
+u,v
+)
+Für ein Ähnlichkeitsmaß 
+sim
+(
+x,y
+) kann eine entsprechende Definition gegeben werden:
+(ii) 
+R
+sim
+(
+x,y,u,v
+) 
+
+sim
+(
+x,y
+) 
+
+sim
+(
+u,v
+)
+sim
+(
+x,y
+) und d(
+x,y
+) heißen kompatibel, falls gilt:
+(iii)  
+R
+d
+(
+x,y,u,v
+) 
+
+R
+sim
+(
+x,y,u,v
+)
+Oder:
+Kann man eine bijektive, ordnungsinvertierende Abbildung mit f(0) = 1 
+und sim(x,y) = f(d(x,y)) angeben, so sind d und sim kompatibel.
+
+Transformationsfunktionen
+Beispiele
+:
+F(x)  =   1  
+-
+x
+x + 1
+Ist ein maximaler Abstand max bekannt, dann auch:
+F(x) = 1 
+-
+x / max
+Weitere Transformationen:
+d(x,y) = 
+
+(1
+-
+sim(x,y))
+d(x,y) = 
+-
+log(sim(x,y))
+F(x)  =   1  
+-
+x
+x + 1
+n
+
+x = (x
+1
+,...,x
+n
+)      
+y = (y
+1
+,...,y
+n
+)
+Formale Festlegung von 4 Beschreibungsgrößen:
+a = 
+
+(
+x
+i
+,y
+i
+)
+c = 
+
+(¬x
+i
+,y
+i
+)
+b = 
+
+(x
+i
+, ¬y
+i
+)
+d = 
+
+(¬x
+i
+, ¬y
+i
+)
+Wie muß ein Ähnlichkeitsmaß aussehen?
+1)  sim(x,y) 
+wächst monoton
+mit a und d
+2)  sim(x,y) ist 
+symmetrisch
+in b und c
+3)  sim(x,y) 
+fällt monoton
+mit b und c
+Ähnlichkeit und Ähnlichkeitsmaße
+Ähnlichkeitsmaße auf 
+Boole'schen
+Vektoren
+x      1   0
+1     a   b
+0     c   d
+y
+Zwei Objekte, die mit den
+Merkmalsvektoren
+x und y 
+beschrieben werden
+Anzahl der
+positiven
+Übereinstimmungen
+Anzahl der
+negativen
+Übereinstimmungen
+
+Distanzmaß:  d(x,y) = b + c
+„
+Hammingabstand
+“
+Daraus abgeleitet:   der „
+Simple Matching Coefficient
+“ (SMC)
+sim(x,y) = 1 
+-
+(b+c) / max = 1 
+-
+(b+c)/(a+b+c+d) = (a+d)/(a+b+c+d)
+Optimistische
+und 
+pessimistische
+Auslegung des SMC
+sim(x,y) = 
+
+(a + d)
+
+(a+d) + (1
+-
+
+)(c+b)
+Für 
+
+= 1/2 ist es der SMC
+Ist 
+
+> 1/2 so ist die Auslegung 
+optimistisch
+, bei 
+
+< 1/2 
+pessimistisch
+.
+sim
+(
+x,y
+) = a / (
+a+b+c
+)
+Jaccard
+Koeffizient
+Nur die positiven 
+Übereinstimmungen
+sind interessant ...
+Asymmetrische
+Maße
+Ähnlichkeit und Ähnlichkeitsmaße
+sim
+(
+x,y
+) = a / (
+a+b+c+d
+)
+Russel Rao
+
+"Informierte" Ähnlichkeitsmaße
+Ein Ähnlichkeitsmaß, das die 
+Alternativenzahl
+berücksichtigt
+sim(x,y) = 1/m * 
+
+m
+i
+* f(x
+i
+,y
+i
+) 
+mit m = 
+
+m
+i 
+und f(x,y) = 1 wenn x=y, sonst 0
+Die bisher vorgestellten Ähnlichkeitsmaße behandeln alle Attribute gleich.
+Ein Mietkarteibeispiel:
+Attribut A :  
+Hausmeister
+{ja, nein}
+Attribut B :  
+Zimmerzahl
+{1,1
+-
+2,2,2
+-
+3,3,3
+-
+4,4,4
+-
+5,5,6}
+2 Ausprägungen
+10 Ausprägungen
+Welche 2 Wohnungen sind sich ähnlicher?
+W
+1
+:  (Hausmeister=ja) 
+
+(Zimmerzahl=3)
+W
+2
+:  (Hausmeister=ja) 
+
+(Zimmerzahl=6)
+W
+3
+:  (Hausmeister=nein) 
+
+(Zimmerzahl=6)
+W
+4
+:  (Hausmeister=ja) 
+
+(Zimmerzahl=6)
+?
+?
+sim(W
+1
+,W
+2
+) = (2
+
+f(w
+1,1
+,w
+2,1
+) + 
+10
+
+f(w
+1,2
+,w
+2,2
+))/12
+sim
+(W
+3
+,W
+4
+) = (2
+
+f(w
+3,1
+,w
+4,1
+) + 
+10
+
+f(w
+3,2
+,w
+4,2
+))/12
+= 1/6 
+= 5/6 
+Ähnlichkeit und Ähnlichkeitsmaße
+
+"Informierte" Ähnlichkeitsmaße
+Eine weitere Information bei Vektoren binärer Attribute:
+Attributvektor A:
+{ A1, A2, A3, A4, A5 }
+10% 95% 2% 50% 80%
+... aller Daten haben
+den Wert 1! 
+Welche Objekte sind sich ähnlicher?
+W
+1
+:  1, 0, 0, 0, 0
+W
+2
+:  1, 1, 1, 1, 1
+W
+3
+:  0, 1, 0, 1, 0
+W
+4
+:  1, 1, 1, 0, 1
+?
+?
+sim(x,y) = 
+(a‘ + d‘)
+(a‘+ b + c + d‘)
+Ein 
+mögliches
+Ähnlichkeitsmaß, das die 
+Merkmalshäufigkeit
+berücksichtigt
+mit a'  = 
+
+i
+(x
+i 
+
+y
+i
+) 
+
+(1
+-
+P
+i
+)
+d'  = 
+
+i
+(¬x
+i 
+
+¬
+y
+i
+) 
+
+P
+i
+P
+i
+sim(W
+1
+,W
+2
+) = 0.9/(0.9+4) = 0.18
+sim(W
+3
+,W
+4
+) = 0.05/(0.05+3+1)= 0.01
+Ähnlichkeit und Ähnlichkeitsmaße
+
+"Informierte" Ähnlichkeitsmaße 
+-
+Wichtigkeit von Attributen
+Nicht alle Angaben sind für ein Konzept gleich wichtig!
+Beispiel:
+Die Ähnlichkeit zweier Personen wird eher am 
+Gesicht
+als 
+am 
+Körperbau
+gemessen.
+sim(x,y) = w
+1
+
+(x
+1
+= y
+1
+) + w
+2
+
+(x
+2 
+= y
+2
+) + ... + w
+n
+
+(x
+n 
+= y
+n
+)
+Ein 
+mögliches
+Ähnlichkeitsmaß, das die 
+Merkmalswichtigkeit
+berücksichtigt
+mit 1  = 
+
+i
+w
+i
+Welche Objekte sind sich ähnlicher?
+X
+1
+:  1, 0, 0, 0, 0
+X
+2
+:  1, 1, 1, 1, 1
+X
+3
+:  0, 1, 0, 1, 0
+X
+4
+:  1, 1, 1, 0, 1
+?
+?
+W = 0.5 0.1 0.1 0.15 0.15
+sim(X
+1
+,X
+2
+) = 0.5
+sim(X
+3
+,X
+4
+) = 0.1
+Ähnlichkeit und Ähnlichkeitsmaße
+
+Ähnlichkeit 
+-
+Anwendung im Fahrzeug
+„Ähnlichkeit“ verwendet als Kriterium
+zum Matching zwischen zwei Messungen
+von Objekterkennern. 
+Gewichtungsfunktion
+:
+f(w,e,d) = w * d
+e
+w = Gewichtung eines Attributs
+d = Betrag der Differenz von zwei Attributwerten
+e = Toleranzfaktor
+r(sensor,attribut,hindernis) im Wertebereich [0,1] 
+-
+eine Zuverlässigkeitsfunktion
+v(A) = Wert des Attributs A
+d(o
+1
+,o
+2
+) =  
+
+i
+f(w
+Ai
+,e
+Ai
+,|v(
+Ai
+,o
+1
+) 
+-
+v(A
+i
+,o
+2
+)|)*r(s(o
+1
+),A
+i
+,o
+1
+)*r(s(o
+2
+),a
+i
+,o
+2
+)
+(
+
+i
+w
+Ai
+* r(s(o
+1
+),A
+i
+,o
+1
+)*r(s(o
+2
+),A
+i
+,o
+2
+)
+sim(o
+1
+,o
+2
+) = 1 
+-
+( d(o
+1
+,o
+2
+)/(1+d(o
+1
+,o
+2
+)))
+k
+K =4, 
+w
+Distanz
+= 1, 
+w
+Offset
+= 2,
+e
+Distanz
+= 2, 
+e
+Offset
+= 3
+
+Duale Hochschule Baden
+-
+Württemberg
+Center for Advanced Studies
+Was ist die Minkowski Distanz?
+Was ist die Minkowski Distanz?
+Was sind informierte Ähnlichkeitsmaße?
+Was sind informierte Ähnlichkeitsmaße?
+Welche Transformationsfunktionen gibt es?
+Welche Transformationsfunktionen gibt es?
+Was sind die Eigenschaften von Skalen?
+Was sind die Eigenschaften von Skalen?
